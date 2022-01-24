@@ -1,0 +1,23 @@
+---
+- name: Start Cluster
+  hosts: localhost
+  become: true
+  become_user: admin
+  vars:
+    host= "localhost"
+  
+  tasks:
+  - name: install nginx
+    yum:
+      name: nginx
+      state: latest
+
+  - name: start nginx
+    service:
+     name: nginx
+     state: started
+
+  - name: print success message       
+    debug:
+      msg: "The Cluster {{host}} has been successfully Started."
+...
