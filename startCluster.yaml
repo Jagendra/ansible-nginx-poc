@@ -3,8 +3,8 @@
   hosts: localhost
   become: true
   become_user: admin
-  vars:
-    host= "localhost"
+  #vars:
+   # host= "localhost"
   
   tasks:
   - name: install nginx
@@ -19,5 +19,5 @@
 
   - name: print success message       
     debug:
-      msg: "The Cluster {{host}} has been successfully Started."
+      msg: "The Cluster has been successfully Started."
 ...
