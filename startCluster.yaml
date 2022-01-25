@@ -3,7 +3,7 @@
   hosts: localhost
   become: true
   become_method: enable
-  #become_user: admin
+  become_user: admin
   #vars:
    # host= "localhost"
   
