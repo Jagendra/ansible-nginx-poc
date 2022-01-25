@@ -1,7 +1,8 @@
 ---
 - name: Start Cluster
   hosts: localhost
-  #become: true
+  become: true
+  become_method: enable
   #become_user: admin
   #vars:
    # host= "localhost"
