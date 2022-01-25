@@ -3,9 +3,9 @@
   hosts: localhost
   become: true
   become_method: enable
-  #become_user: admin
-  vars:
-    host= "localhost"
+  become_user: admin
+  #vars:
+    #host= "localhost"
   
   tasks:
   - name: uninstall nginx
@@ -20,5 +20,5 @@
 
   - name: print success message       
     debug:
-      msg: "The Cluster {{host}} has been successfully Stopped."
+      msg: "The Cluster has been successfully Stopped."
 ...
